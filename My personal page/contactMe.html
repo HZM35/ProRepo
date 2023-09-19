@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("5LGoheszUpTamqL7m");
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+</head>
+
+<body>
+    <section id="section4" class="s2">
+        <div id="main-container">
+
+
+            <h3 style="text-align: center;">Get In Touch</h3>
+            <form id="contact-form">
+                <label> Name</label>
+                <input id="name" class="input-field" type="text" >
+
+                <label> subject</label>
+                <input id="subject" class="input-field" type="text">
+
+                <label> E-mail</label>
+                <input id="email" class="input-field" type="text">
+
+                <label> message</label>
+                <textarea id="message" class="input-field"></textarea>
+
+                <button type="submit" id="submit-btn" onclick="sendMail()">Send</button>
+                
+            </form>
+
+        </div>
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="mailSender.js"></script>
+</body>
+
+</html>
