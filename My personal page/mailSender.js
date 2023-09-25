@@ -28,7 +28,7 @@ contactForm.addEventListener("submit", (event) => {
     document.getElementById("subject").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
-    console.log("Your message has been sent successfully");
+    alert("Your message has been sent successfully");
   };
 
   sendMail();
