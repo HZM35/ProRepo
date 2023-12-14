@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Projekt.iml" filepath="$PROJECT_DIR$/.idea/Projekt.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/gruppe_blau/RetrivingData/Sprint2.iml" filepath="$PROJECT_DIR$/gruppe_blau/RetrivingData/Sprint2.iml" />
+>>>>>>> 649de1636727f63150ef2b36372d35b947aeff4d
     </modules>
   </component>
 </project>
