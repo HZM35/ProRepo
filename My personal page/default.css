@@ -147,11 +147,11 @@ padding:10px ;
 #profile_pic{
     display: block;
     margin: 0 auto;
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 230px;
 
     object-fit: cover;
-    border: 2px solid var(--borderColor);
+    
 
 }
 #theme-option-wrapper{
@@ -266,8 +266,57 @@ left: -5px;
    
 }
 #social_img{
-    width: 80%;
+    width: 58%;
+    margin: 0 auto;
 }
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+  }
+  
+  .svgIcon {
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+  }
+  
+  .Btn:hover {
+    width: 130px;
+    transition-duration: .4s;
+    border-radius: 30px;
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+  }
+  
+  .Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+  }
 .post-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit,320px);
@@ -308,6 +357,8 @@ left: -5px;
     right: 0;
     z-index: 9999;    
 }
+
+
 #contact-form{
     display: block;
     max-width: 600px;
@@ -341,18 +392,181 @@ left: -5px;
     
 }
 
-#submit-btn{
+.formwrapper{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.formButton  {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .formButton span {
+    display: block;
+    color: white;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .formButton svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .formButton:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .formButton:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  .formButton:hover span {
+    transform: translateX(5em);
+  }
+  
+  .formButton:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+/*#submit-btn{
     margin-top: 10px;
     width: 100%;
     padding-top: 10px;
     border-radius: 5px;
     padding-bottom: 10px;
     color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
     background-color: var(--btnColor);
     
 
 }
 
+.contactFooterDiv{
+    
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+    background-color: var(--secondaryColor) ;
+    border-top: 1px solid var(--borderColor);
+    
+}
+.buttonFooter {
+    background-color: var(--buttonColor); 
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+
+.buttonFooter:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}*/
+footer{
+    background-color: var(--mainColor);
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--secodaryText);
+}
+
+.button {
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+    cursor: pointer;
+  }
+  
+  .button:active {
+    transform: scale(0.97);
+  }
+  
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hoverEffect div {
+    background: rgb(222,0,75);
+    background: linear-gradient(90deg, rgba(222,0,75,1) 0%, rgba(191,70,255,1) 49%, rgba(0,212,255,1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+  }
+  
+  .button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  @keyframes effect {
+  
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 @media screen and (max-width: 1200px) {
     
     .main-container{
