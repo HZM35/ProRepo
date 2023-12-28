@@ -4,11 +4,16 @@ contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const sendMail = async () => {
+    const nameInput = document.getElementById("name");
+    const subjectInput = document.getElementById("subject");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+
     var params = {
-      name: document.getElementById("name").value,
-      subject: document.getElementById("subject").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
+      name: nameInput.value,
+      subject: subjectInput.value,
+      email: emailInput.value,
+      message: messageInput.value,
     };
 
     const serviceID = "service_bp6u6tc";
@@ -19,15 +24,15 @@ contactForm.addEventListener("submit", (event) => {
       alert("Bitte füllen Sie alle Felder aus.");
       return;
     }
-        if (!confirm("Are you sure you want to send this message?")) {
+    if (!confirm("Are you sure you want to send this message?")) {
       return;
     }
     await emailjs.send(serviceID, templateID, params);
 
-    document.getElementById("name").value = "";
-    document.getElementById("subject").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
+    nameInput.value = "";
+    subjectInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
     alert("Your message has been sent successfully");
   };
 
